@@ -15,6 +15,13 @@
 		E9A12E0C25C9BE7B0002F300 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9A12E0A25C9BE7B0002F300 /* LaunchScreen.storyboard */; };
 		E9A12E1725C9BE7B0002F300 /* SimonGameAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A12E1625C9BE7B0002F300 /* SimonGameAppTests.swift */; };
 		E9A12E2225C9BE7C0002F300 /* SimonGameAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A12E2125C9BE7C0002F300 /* SimonGameAppUITests.swift */; };
+		E9A12E3325C9C59C0002F300 /* 0.wav in Resources */ = {isa = PBXBuildFile; fileRef = E9A12E3225C9C59C0002F300 /* 0.wav */; };
+		E9A12E3825C9C5A20002F300 /* 1.wav in Resources */ = {isa = PBXBuildFile; fileRef = E9A12E3725C9C5A10002F300 /* 1.wav */; };
+		E9A12E3D25C9C5A70002F300 /* 2.wav in Resources */ = {isa = PBXBuildFile; fileRef = E9A12E3C25C9C5A60002F300 /* 2.wav */; };
+		E9A12E4225C9C5AC0002F300 /* 3.wav in Resources */ = {isa = PBXBuildFile; fileRef = E9A12E4125C9C5AB0002F300 /* 3.wav */; };
+		E9A12E4725C9C5B60002F300 /* start.wav in Resources */ = {isa = PBXBuildFile; fileRef = E9A12E4625C9C5B60002F300 /* start.wav */; };
+		E9A12E4C25C9C5BB0002F300 /* lose.wav in Resources */ = {isa = PBXBuildFile; fileRef = E9A12E4B25C9C5BB0002F300 /* lose.wav */; };
+		E9A12E5225C9C5F70002F300 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9A12E5125C9C5F70002F300 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +56,13 @@
 		E9A12E1D25C9BE7C0002F300 /* SimonGameAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimonGameAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9A12E2125C9BE7C0002F300 /* SimonGameAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimonGameAppUITests.swift; sourceTree = "<group>"; };
 		E9A12E2325C9BE7C0002F300 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9A12E3225C9C59C0002F300 /* 0.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 0.wav; path = ../../../../Downloads/0.wav; sourceTree = "<group>"; };
+		E9A12E3725C9C5A10002F300 /* 1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 1.wav; path = ../../../../Downloads/1.wav; sourceTree = "<group>"; };
+		E9A12E3C25C9C5A60002F300 /* 2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 2.wav; path = ../../../../Downloads/2.wav; sourceTree = "<group>"; };
+		E9A12E4125C9C5AB0002F300 /* 3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 3.wav; path = ../../../../Downloads/3.wav; sourceTree = "<group>"; };
+		E9A12E4625C9C5B60002F300 /* start.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = start.wav; path = ../../../../Downloads/start.wav; sourceTree = "<group>"; };
+		E9A12E4B25C9C5BB0002F300 /* lose.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = lose.wav; path = ../../../../Downloads/lose.wav; sourceTree = "<group>"; };
+		E9A12E5125C9C5F70002F300 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9A12E5225C9C5F70002F300 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +98,7 @@
 				E9A12E1525C9BE7B0002F300 /* SimonGameAppTests */,
 				E9A12E2025C9BE7C0002F300 /* SimonGameAppUITests */,
 				E9A12DFD25C9BE750002F300 /* Products */,
+				E9A12E5025C9C5F70002F300 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,6 +118,12 @@
 				E9A12DFF25C9BE750002F300 /* AppDelegate.swift */,
 				E9A12E0125C9BE750002F300 /* SceneDelegate.swift */,
 				E9A12E0325C9BE750002F300 /* ViewController.swift */,
+				E9A12E3225C9C59C0002F300 /* 0.wav */,
+				E9A12E3725C9C5A10002F300 /* 1.wav */,
+				E9A12E3C25C9C5A60002F300 /* 2.wav */,
+				E9A12E4125C9C5AB0002F300 /* 3.wav */,
+				E9A12E4625C9C5B60002F300 /* start.wav */,
+				E9A12E4B25C9C5BB0002F300 /* lose.wav */,
 				E9A12E0525C9BE750002F300 /* Main.storyboard */,
 				E9A12E0825C9BE7B0002F300 /* Assets.xcassets */,
 				E9A12E0A25C9BE7B0002F300 /* LaunchScreen.storyboard */,
@@ -126,6 +148,14 @@
 				E9A12E2325C9BE7C0002F300 /* Info.plist */,
 			);
 			path = SimonGameAppUITests;
+			sourceTree = "<group>";
+		};
+		E9A12E5025C9C5F70002F300 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E9A12E5125C9C5F70002F300 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,7 +261,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9A12E4225C9C5AC0002F300 /* 3.wav in Resources */,
+				E9A12E3825C9C5A20002F300 /* 1.wav in Resources */,
 				E9A12E0C25C9BE7B0002F300 /* LaunchScreen.storyboard in Resources */,
+				E9A12E4725C9C5B60002F300 /* start.wav in Resources */,
+				E9A12E3325C9C59C0002F300 /* 0.wav in Resources */,
+				E9A12E3D25C9C5A70002F300 /* 2.wav in Resources */,
+				E9A12E4C25C9C5BB0002F300 /* lose.wav in Resources */,
 				E9A12E0925C9BE7B0002F300 /* Assets.xcassets in Resources */,
 				E9A12E0725C9BE750002F300 /* Main.storyboard in Resources */,
 			);

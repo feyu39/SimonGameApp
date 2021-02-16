@@ -1,24 +1,158 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad9_7" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SimonGameApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Simon Game" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXj-6Y-rBf">
+                                <rect key="frame" x="250.5" y="5" width="267" height="65"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="50"/>
+                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aWn-mF-MEZ" userLabel="redButton">
+                                <rect key="frame" x="30" y="90" width="300" height="300"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="aWn-mF-MEZ" secondAttribute="height" multiplier="1:1" id="V72-Uw-dvZ"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="redButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uwJ-ED-RoN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="biI-Yj-Ext" userLabel="greenButton">
+                                <rect key="frame" x="438" y="90" width="300" height="300"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <connections>
+                                    <action selector="greenButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CGH-cK-ShT"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Computer Move" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YoJ-bK-QIX">
+                                <rect key="frame" x="0.0" y="415" width="768" height="43.5"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="0sj-wp-ErT">
+                                <rect key="frame" x="120" y="788.5" width="528" height="211"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KAD-Jb-ugH">
+                                        <rect key="frame" x="0.0" y="0.0" width="528" height="52"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="40"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current: " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MUB-cW-p4J">
+                                        <rect key="frame" x="0.0" y="57" width="528" height="35"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="32"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Best: " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xfz-Jk-wTQ">
+                                        <rect key="frame" x="0.0" y="97" width="528" height="35"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="32"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RWf-3b-KGw" userLabel="Play Button">
+                                        <rect key="frame" x="0.0" y="137" width="528" height="74"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="47"/>
+                                        <state key="normal" title="Play"/>
+                                        <connections>
+                                            <action selector="playButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aSq-Vl-m2B"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ShD-RB-N9B" userLabel="yellowButton">
+                                <rect key="frame" x="438" y="483.5" width="300" height="300"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <connections>
+                                    <action selector="yellowButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AdT-69-S87"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zf0-EG-FR5" userLabel="blueButton">
+                                <rect key="frame" x="30" y="483.5" width="300" height="300"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <connections>
+                                    <action selector="blueButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ckn-Ck-GX0"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zf0-EG-FR5" firstAttribute="height" secondItem="aWn-mF-MEZ" secondAttribute="height" id="02X-4F-WrV"/>
+                            <constraint firstItem="zf0-EG-FR5" firstAttribute="width" secondItem="aWn-mF-MEZ" secondAttribute="width" id="0Ac-wP-kX7"/>
+                            <constraint firstItem="zf0-EG-FR5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="0kq-3s-qxC"/>
+                            <constraint firstItem="0sj-wp-ErT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="1lc-pi-ixU"/>
+                            <constraint firstItem="biI-Yj-Ext" firstAttribute="leading" secondItem="aWn-mF-MEZ" secondAttribute="trailing" constant="108" id="5Cy-YD-cZb"/>
+                            <constraint firstItem="zf0-EG-FR5" firstAttribute="top" secondItem="YoJ-bK-QIX" secondAttribute="bottom" constant="25" id="5tx-gE-gRl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0sj-wp-ErT" secondAttribute="trailing" constant="120" id="AlX-2T-pd7"/>
+                            <constraint firstItem="ShD-RB-N9B" firstAttribute="leading" secondItem="zf0-EG-FR5" secondAttribute="trailing" constant="108" id="Dop-UP-1Bj"/>
+                            <constraint firstItem="biI-Yj-Ext" firstAttribute="height" secondItem="aWn-mF-MEZ" secondAttribute="height" id="Ell-Tu-VS4"/>
+                            <constraint firstItem="ShD-RB-N9B" firstAttribute="top" secondItem="YoJ-bK-QIX" secondAttribute="bottom" constant="25" id="G9e-fp-HEa"/>
+                            <constraint firstItem="gXj-6Y-rBf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JBf-hf-zN5"/>
+                            <constraint firstItem="YoJ-bK-QIX" firstAttribute="top" secondItem="biI-Yj-Ext" secondAttribute="bottom" constant="25" id="KaF-Jt-x6D"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="biI-Yj-Ext" secondAttribute="trailing" constant="30" id="Kgc-Ay-C26"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ShD-RB-N9B" secondAttribute="trailing" constant="30" id="SZP-3d-Qa4"/>
+                            <constraint firstItem="aWn-mF-MEZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Tx5-p0-IHj"/>
+                            <constraint firstItem="gXj-6Y-rBf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="b3e-Ok-kR2"/>
+                            <constraint firstItem="biI-Yj-Ext" firstAttribute="width" secondItem="aWn-mF-MEZ" secondAttribute="width" id="glC-Sq-Gqc"/>
+                            <constraint firstItem="YoJ-bK-QIX" firstAttribute="top" secondItem="aWn-mF-MEZ" secondAttribute="bottom" constant="25" id="jco-y5-oK6"/>
+                            <constraint firstItem="YoJ-bK-QIX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oFV-OJ-x5C"/>
+                            <constraint firstItem="ShD-RB-N9B" firstAttribute="height" secondItem="aWn-mF-MEZ" secondAttribute="height" id="rgq-dY-5Zu"/>
+                            <constraint firstItem="0sj-wp-ErT" firstAttribute="top" secondItem="zf0-EG-FR5" secondAttribute="bottom" constant="5" id="sEe-HF-KPv"/>
+                            <constraint firstItem="aWn-mF-MEZ" firstAttribute="top" secondItem="gXj-6Y-rBf" secondAttribute="bottom" constant="20" id="stn-IL-Mtq"/>
+                            <constraint firstItem="YoJ-bK-QIX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tdM-j6-TqB"/>
+                            <constraint firstItem="ShD-RB-N9B" firstAttribute="width" secondItem="aWn-mF-MEZ" secondAttribute="width" id="vht-sz-d03"/>
+                            <constraint firstItem="biI-Yj-Ext" firstAttribute="top" secondItem="gXj-6Y-rBf" secondAttribute="bottom" constant="20" id="w6G-53-EKh"/>
+                            <constraint firstItem="0sj-wp-ErT" firstAttribute="top" secondItem="ShD-RB-N9B" secondAttribute="bottom" constant="5" id="wgd-aZ-Ua2"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bestScoreLabel" destination="Xfz-Jk-wTQ" id="izt-vk-ihJ"/>
+                        <outlet property="blueButton" destination="zf0-EG-FR5" id="Bye-Zp-GIG"/>
+                        <outlet property="currentScoreLabel" destination="MUB-cW-p4J" id="BdT-7J-L1k"/>
+                        <outlet property="greenButton" destination="biI-Yj-Ext" id="ucv-xv-g9B"/>
+                        <outlet property="moveLabel" destination="YoJ-bK-QIX" id="zne-PR-0nB"/>
+                        <outlet property="playButton" destination="RWf-3b-KGw" id="LVM-jT-QNz"/>
+                        <outlet property="redButton" destination="aWn-mF-MEZ" id="Qi7-ri-F2v"/>
+                        <outlet property="yellowButton" destination="ShD-RB-N9B" id="932-JM-bhd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="93.75"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
